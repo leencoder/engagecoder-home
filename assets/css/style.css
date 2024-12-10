@@ -59,7 +59,6 @@ header nav.navbar-light .navbar-nav .active>.nav-link,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .show>.nav-link {
     color: rgb(251 177 56);
-    border-bottom: 2px solid;
     padding-bottom: 30px;
     font-weight: 600;
 }
@@ -83,6 +82,21 @@ header .dropdown-toggle::after {
     background-repeat: no-repeat;
     vertical-align: middle !important;
     border: none !important;
+}
+
+header li.nav-item.active:before {
+    width: 45px;
+    height: 3px;
+    content: "";
+    position: absolute;
+    background-color: #fcb138;
+    bottom: 0;
+}
+
+header li.nav-item.active {
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 /* -------------------hero section-------------------------- */
@@ -233,7 +247,8 @@ header .dropdown-toggle::after {
 }
 
 .testimonial .testimonial-description {
-    margin-inline: 210px;
+    max-width: 70%;
+    margin: 0 auto;
 }
 
 /* --------------------- blog ------------------------------- */
